@@ -27,7 +27,7 @@
 [ok] https://typeorm.io/#/working-with-repository
 [ok] orm - database / index
 [ok] migrations / yarn typeorm migration:run
-[]
+[ok] entities / User
 []
 []
 []
