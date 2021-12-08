@@ -28,8 +28,9 @@
 [ok] orm - database / index
 [ok] migrations / yarn typeorm migration:run
 [ok] entities / User
-[]
-[]
+[ok] Repositorio na aplicação. Camada entre entidade e o Banco de dados
+chamada de repositories.
+[ok] Service(serviços ou Cases) - Sererver(usuário) -> (Repositories) -> A camada de Service é responável por processar as regras e validações antes que a requisição seja enviada para o BD ou antes de mandar um retorno para o uruário. 
 []
 []
 []
