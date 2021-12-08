@@ -1,4 +1,4 @@
-
+import { getCustomRepository } from "typeorm"
 import { UsersRepositories} from "../repositories/UsersRepositories"
 
 
@@ -9,9 +9,12 @@ interface IUserRequest {
 }
 
 class CreateUserService {
-
     async execute( {name, email, admin} : IUserRequest){
-        const usersRepository = new UsersRepositories();        
+        //const usersRepository = new UsersRepositories();
+        const usersRepository = getCustomRepository(UsersRepositories); 
+        
+        console.log("Nome", name, "Email", email, "ID", admin);
+        
         // Se o e-mail estiver vazio ou incorreto vai dar erro
         if (!email){
             throw new Error("Email  incorrect");

@@ -25,8 +25,9 @@
 **********************************************************
 ##### PASSOS SEGUNDA AULA
 [ok] https://typeorm.io/#/working-with-repository
+[ok] comando para criar o banco => após definir as configurações do banco de dados no arquivo ormconfig, após criar a pasta do banco e o arquivo index dentro da pasta e importar a conexão e configurar, após importar o database para o arquivo server, rodar o comando yarn dev para criar a base de dados / 30:00min da segunda aula. 
 [ok] orm - database / index
-[ok] migrations / yarn typeorm migration:run
+[ok] migrations / criar migrations comando => yarn typeorm migration:create -n CreateUsers / Rodar => yarn typeorm migration:run
 [ok] entities / User
 [ok] Repositorio na aplicação. Camada entre entidade e o Banco de dados
 chamada de repositories.
@@ -35,3 +36,4 @@ chamada de repositories.
 []
 []
 []
+-----------------------------------------------------
