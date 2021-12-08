@@ -1,0 +1,8 @@
+Node. 
+
+yarn tsc converte meu arquivo de index.ts para index.js
+e com isso conseguimos executar o excript com o comando
+node index.js .... 
+
+
+
