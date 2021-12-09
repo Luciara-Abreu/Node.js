@@ -86,13 +86,13 @@ Nada mais é do que um token para autenticação e validação de dados.
 [ok] Vamos precisar criar uma migration para inserir um campo dentro da nossa estrutura de banco de dados pois esquecemos que o usuário precisar ter uma senha para fazermos as validações e ver se o mesmo é um admin ou não!! => yarn typeorm migration:create -n AuterUserAddPassword
 Após criar os dados da coluna na migration, temos que rodar a mesma para que a coluna seja criada. => yarn typeorm migration:run
 
-[ok] Agora iremos ter que alterar o usuário e add esse novo campo para que seja preenchido.
+[ok] Agora iremos ter que alterar o user, services, controller e add esse novo campo para que seja preenchido.
 
-[]
+[ok] Iremos usar uma biblioteca de criptografia de senhas para salvar de maneira segura no banco de dados. => yarn add bcryptjs e após instalar tbm as suas typagens => yarn add @types/bcryptjs - D   <= Dependencia de desenvolvimento.
 
-[]
+[ok] Autenticação do usuário - Vamos criar uma rota para autenticar o usuário e gerar um tokem para o mesmo. 
 
-[]
+[Ok] Dentro de service vamos criar AuthenticateUserService. Essa classe será responsável por autenticar o usuário.
 
 []
 

@@ -1,19 +1,19 @@
 import { getCustomRepository } from "typeorm"
 import { UsersRepositories} from "../repositories/UsersRepositories"
+import { hash } from "bcryptjs" //hash metodo responsável por pegar nossa senha e criptografar
 
 
 interface IUserRequest {
     name: string;
     email: string;
-    admin?: boolean
+    admin?: boolean;
+    password: string;
 }
 
 class CreateUserService {
-    async execute( {name, email, admin} : IUserRequest){
+    async execute( {name, email, admin, password} : IUserRequest){
         //const usersRepository = new UsersRepositories();
         const usersRepository = getCustomRepository(UsersRepositories); 
-        
-        console.log("Nome", name, "Email", email, "ID", admin);
         
         // Se o e-mail estiver vazio ou incorreto vai dar erro
         if (!email){
@@ -30,11 +30,14 @@ class CreateUserService {
             throw new Error("User alread exists");
         }
 
+        const passwordHash = await hash(password, 8)
+
         //Caso o email passado ainda não exista ele irá criar um objeto e ...
         const user = usersRepository.create ({
             name,
             email,
-            admin
+            admin,
+            password: passwordHash,
         })
 
         // irá gravar o novo usuáirio
