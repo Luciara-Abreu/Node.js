@@ -1,29 +1,31 @@
 ## NLW Valoriza
 
 ### Regras
+********************************************
 - Cadastro de uruário.
 
-[] Não é permitido cadastrar mais de um usuário com o mesmo e-mail.
+[ok] Não é permitido cadastrar mais de um usuário com o mesmo e-mail.
 
-[] Não é permitido cadastrar usuário sem e-mail.
+[ok] Não é permitido cadastrar usuário sem e-mail.
 
-[] Cadastro de TAG.
+[ok] Cadastro de TAG.
 
-[] Não é permitido cadastrar mais de uma TAG com o memso nome.
+[ok] Não é permitido cadastrar mais de uma TAG com o memso nome.
 
-[] Não é permitido cadastrar TAG sem nome.
+[ok] Não é permitido cadastrar TAG sem nome.
 
-[] Não é permitido cadastar usuários que não sejam administradores
+[ok] Não é permitido cadastar usuários que não sejam administradores
 
-[] Não é permitido um usuário cadastrar elogio para si.
+[ok] Não é permitido um usuário cadastrar elogio para si.
 
-[] Não é permitido cadastrar elogios para usuários inválidos.
+[ok] Não é permitido cadastrar elogios para usuários inválidos.
 
-[] O usuário precisa estar autenticado na aplicação.
+[ok] O usuário precisa estar autenticado na aplicação.
 
 
-**********************************************************
-##### PASSOS SEGUNDA DIA DE AULA
+#********************************************
+
+### PASSOS SEGUNDA DIA DE AULA
 [ok] https://typeorm.io/#/working-with-repository
 
 
@@ -41,8 +43,9 @@ chamada de repositories.
 [ok] Service(serviços ou Cases) - Sererver(usuário) -> (Repositories) -> A camada de Service é responável por processar as regras e validações antes que a requisição seja enviada para o BD ou antes de mandar um retorno para o uruário. 
 
 [ok] Controller - Camada Server recebe a requisição, ele repassa para o controller onde o controller chama o service e o mesmo faz as validações que já comentamos. Então a camada controller funciona como o request e response que fizemos na primeira aula. Dentro dessa camada vamos ter acesso ao Request e Response. Com isso cada classe tem as suas responsabilidades. Ele vai servir para pegar nossa requisição do server e repassar para o services.
------------------------------------------------------
-##### PASSOS TERCEIRO DIA DE AULA
+********************************************
+
+### PASSOS TERCEIRO DIA DE AULA
 [ok] Tratamento de erros - Onde está nosso throw new error?? Está na Service e a service manda o erro para a camada acima. Só para entendermos.
 server -> routes -> controller -> service. Quando a service recebe o erro ela manda para a controller tratar porém podemos criar na camada SERVER midware de erro.
 
@@ -66,9 +69,11 @@ após criar a estrutura da tabela de tags rodar =>yarn typeorm migration:run par
 
 [ok] middleware - Diretório middleware que irá validar algumas informações dos usuários vindos da requisição.
 
-[ok] Finalizado a parte das tags 
------------------------------------------------------
-##### PASSOS QUARTO DIA DE AULA
+[ok] Finalizado a parte das tags
+
+********************************************
+
+### PASSOS QUARTO DIA DE AULA
 [] JWT - O que é o JTW ==> JSON Web Tokens são métodos para representar reivindicações com segurança entre duas partes.
 JWT.IO permite decodificar, verificar e gerar JWT. 
 
@@ -80,8 +85,11 @@ JWT.IO permite decodificar, verificar e gerar JWT.
 []
 []
 []
------------------------------------------------------
-##### PASSOS QUINTO DIA DE AULA
+
+
+********************************************
+
+### PASSOS QUINTO DIA DE AULA
 []
 []
 []
@@ -91,3 +99,4 @@ JWT.IO permite decodificar, verificar e gerar JWT.
 []
 []
 []
+#********************************************
