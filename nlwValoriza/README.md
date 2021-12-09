@@ -39,11 +39,12 @@ chamada de repositories.
 server -> routes -> controller -> service. Quando a service recebe o erro ela manda para a controller tratar porém podemos criar na camada SERVER midware de erro.
 [ok] Middleware - de erro tem que ter 4 parametros. Os paramentros devem ser tipados. 
 [ok] instalar a biblioteca que saberá lidar com os erros => yarn add express-async-errors
+### TAGS curso 3 aula =:>18:27min
 [ok] Estruturas de tags - Criar nossa migration de tags => yarn typeorm migrition:create -n CreateTags,
 após criar a estrutura da tabela de tags rodar =>yarn typeorm migration:run para que seja criado no banco de dados a tabela.
 [ok] Repositório das Tags - TagsRepositories.ts - Após criar o repositório, criar a TagService. 
-[ok] TagService - que verificam se as tags estão cadastadas ou se precisa cadastrar.
-[]
-[]
-[]
+[ok] TagService - que verificam se as tags estão cadastadas ou se precisa cadastrar. Depois de criar o Service temos que criar o controller
+[ok] Controller - Depois que o controller for criado e add todos os metodos é preciso referenciar ele na nossa rota. Apos tudo certo, rodar a aplicação com o comando = > yarn dev após ir no insomnia e criar a outra request tag
+[ok] Ordenação de criação==> Migrations => Entities => Repositories => Services => Routes => Controllers
+[ok] Amando o curso <3
 -----------------------------------------------------
