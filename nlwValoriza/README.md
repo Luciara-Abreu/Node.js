@@ -47,4 +47,27 @@ após criar a estrutura da tabela de tags rodar =>yarn typeorm migration:run par
 [ok] Controller - Depois que o controller for criado e add todos os metodos é preciso referenciar ele na nossa rota. Apos tudo certo, rodar a aplicação com o comando = > yarn dev após ir no insomnia e criar a outra request tag
 [ok] Ordenação de criação==> Migrations => Entities => Repositories => Services => Routes => Controllers
 [ok] Amando o curso <3
+[ok] middleware - Diretório middleware que irá validar algumas informações dos usuários vindos da requisição.
+[ok] Finalizado a parte das tags 
 -----------------------------------------------------
+##### PASSOS QUARTO DIA DE AULA
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+-----------------------------------------------------
+##### PASSOS QUINTO DIA DE AULA
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
