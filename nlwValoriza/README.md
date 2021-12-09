@@ -23,7 +23,7 @@
 [ok] O usuário precisa estar autenticado na aplicação.
 
 
-#********************************************
+********************************************
 
 ### PASSOS SEGUNDA DIA DE AULA
 [ok] https://typeorm.io/#/working-with-repository
@@ -74,16 +74,26 @@ após criar a estrutura da tabela de tags rodar =>yarn typeorm migration:run par
 ********************************************
 
 ### PASSOS QUARTO DIA DE AULA
-[] JWT - O que é o JTW ==> JSON Web Tokens são métodos para representar reivindicações com segurança entre duas partes.
-JWT.IO permite decodificar, verificar e gerar JWT. 
+[ok] JWT - O que é o JTW ==> JSON Web Tokens são métodos para representar reivindicações com segurança entre duas partes.
+JWT.IO permite decodificar, verificar e gerar JWT.
+Nada mais é do que um token para autenticação e validação de dados.
+
+[ok] instalar a biblioteca para usar o JWT => yarn add jsonwebtoken.
+
+[ok] Nós vamos precisar das tipagens. Obs.: Tipagens só usamos em ambiente de desenvolvimento.
+=> yarn add @types/jsonwebtoken -D
+
+[ok] Vamos precisar criar uma migration para inserir um campo dentro da nossa estrutura de banco de dados pois esquecemos que o usuário precisar ter uma senha para fazermos as validações e ver se o mesmo é um admin ou não!! => yarn typeorm migration:create -n AuterUserAddPassword
+Após criar os dados da coluna na migration, temos que rodar a mesma para que a coluna seja criada. => yarn typeorm migration:run
+
+[ok] Agora iremos ter que alterar o usuário e add esse novo campo para que seja preenchido.
 
 []
+
 []
+
 []
-[]
-[]
-[]
-[]
+
 []
 
 
@@ -91,12 +101,21 @@ JWT.IO permite decodificar, verificar e gerar JWT.
 
 ### PASSOS QUINTO DIA DE AULA
 []
+
 []
+
 []
+
 []
+
 []
+
 []
+
 []
+
 []
+
 []
-#********************************************
+
+********************************************
