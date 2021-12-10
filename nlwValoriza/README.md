@@ -128,7 +128,9 @@ Colei no site  https://jwt.io/ sem as aspas e dá para ver no campo=> PAYLOAD:DA
  Agora temos que rodar nossa migration => yarn typeorm migration:run
  Depois vamos dar um refresh no Beekeeper e ver nossa tabelinha criada <3
 
-[ok] Agora vamos criar uma entidade Compliments com os mesmos atributos da Migration 
+[ok] Agora vamos criar uma entidade Compliments com os mesmos atributos da Migration. 
+
+[ok] Agora criar um repositório para nossa compliments
 
 
 ********************************************
