@@ -83,7 +83,8 @@ Nada mais é do que um token para autenticação e validação de dados.
 [ok] Nós vamos precisar das tipagens. Obs.: Tipagens só usamos em ambiente de desenvolvimento.
 => yarn add @types/jsonwebtoken -D
 
-[ok] Vamos precisar criar uma migration para inserir um campo dentro da nossa estrutura de banco de dados pois esquecemos que o usuário precisar ter uma senha para fazermos as validações e ver se o mesmo é um admin ou não!! => yarn typeorm migration:create -n AuterUserAddPassword
+[ok] Vamos precisar criar uma migration para inserir um campo dentro da nossa estrutura de banco de dados pois a profe queria mostrar como criar uma coluna após ja ter criado a tabela.
+O usuário precisar ter uma senha para fazermos as validações e ver se o mesmo é um admin ou não!! => yarn typeorm migration:create -n AuterUserAddPassword
 Após criar os dados da coluna na migration, temos que rodar a mesma para que a coluna seja criada. => yarn typeorm migration:run
 
 [ok] Agora iremos ter que alterar o user, services, controller e add esse novo campo para que seja preenchido.
@@ -92,9 +93,39 @@ Após criar os dados da coluna na migration, temos que rodar a mesma para que a 
 
 [ok] Autenticação do usuário - Vamos criar uma rota para autenticar o usuário e gerar um tokem para o mesmo. 
 
-[Ok] Dentro de service vamos criar AuthenticateUserService. Essa classe será responsável por autenticar o usuário.
+[Ok] Dentro de service vamos criar AuthenticateUserService.ts Essa classe será responsável por autenticar o usuário.
 
-[]
+### Dúvidas.:
+
+- Sobre o Tokem, Como gerar a chave automaticamente??? Estou pensando em um sistema com muitos usuários... 
+Aqui no curso a profe pegou uma chave de um site e colou no código dando-lhe um dia de vida útil para o mesmo. 
+
+[ok] Dentro de Controller vamos criar AuthenticateUserController.ts
+Nessa classe pegamos através do request os dados do usuário e vamos validar chamando um objeto da classe AuthenticateUserService, passando para ela o e-mail e o password do usuário e se tudo estiver certinho,
+        const token = await authenticateUserService.execute({
+            email,
+            password
+        });
+ o tokem recebe a chave e retorna para o usuário a chave que irá ser usada naquele dia.
+ return response.json(token);
+
+ [ok] Vamos add na nossa AuthenticateUserController na nossa rota e depois criar nossa rota no Insomnia e ver se deu bom!! 
+ Criado a nova request no insomnia e deu tudo certo. 
+ nossa aplicação criou um tokem e nos informou ali no response :))
+ {
+
+	"email": "luci.abreu@gmail.com",
+	"password": "1234"
+
+}
+Foi gerado esse tokem...
+
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1Y2kuYWJyZXVAZ21haWwuY29tIiwiaWF0IjoxNjM5MTU1NjQ3LCJleHAiOjE2MzkyNDIwNDcsInN1YiI6IjYwNTlkMWZmLTMyM2YtNDFiNS05MDIyLTBhY2NiNjZiMTA5NSJ9.u7DocTVmw4A-E_TKydYy0B2TunumB6SayEf4uiAZJ3M"
+
+Colei no site  https://jwt.io/ sem as aspas e dá para ver no campo=> PAYLOAD:DATA os dados não tão criticos que foi passado pelo usuário na request. 
+
+ [ok!] 
+
 
 
 ********************************************

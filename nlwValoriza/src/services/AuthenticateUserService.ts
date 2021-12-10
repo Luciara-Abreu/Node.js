@@ -20,7 +20,7 @@ class AuthenticateUserService{
         });
 
         if(!user){
-            throw new Error("Email/password incorrect!")
+            throw new Error("Email/Password incorrect!")
         }
 
         //Verificar se senha está correta ou é igual a cadastrada 
