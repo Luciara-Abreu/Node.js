@@ -31,7 +31,7 @@ class Compliment {
     tag: User
 
     @Column()
-    massage: string;
+    message: string;
 
     @CreateDateColumn()
     Created_at: Date;
