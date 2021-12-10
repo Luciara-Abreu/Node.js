@@ -9,7 +9,7 @@ interface IComplimentRequest{
     message: string;
 }
 
-class CreateComplimentServer{
+class CreateComplimentService{
     async execute ({ tag_id, user_receiver, user_sender, message} : IComplimentRequest){
         const complimentsRipositories = getCustomRepository(ComplimentsRepositories);
         const usersRipositories = getCustomRepository(UsersRepositories);
@@ -37,4 +37,4 @@ class CreateComplimentServer{
         }        
     }
 
-export { CreateComplimentServer}
+export { CreateComplimentService}

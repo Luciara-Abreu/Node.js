@@ -132,6 +132,10 @@ Colei no site  https://jwt.io/ sem as aspas e dá para ver no campo=> PAYLOAD:DA
 
 [ok] Agora criar um repositório para nossa compliments
 
+[ok] Criado a classe de Compliments Service.
+
+[ok] Agora iremos criar nosso controller => CreateComplimentsController
+
 
 ********************************************
 
