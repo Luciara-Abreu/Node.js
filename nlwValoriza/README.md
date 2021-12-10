@@ -127,8 +127,8 @@ Colei no site  https://jwt.io/ sem as aspas e dá para ver no campo=> PAYLOAD:DA
  [ok] Migration compliments para crir os relacionamentos entre as tabelas.
  Agora temos que rodar nossa migration => yarn typeorm migration:run
  Depois vamos dar um refresh no Beekeeper e ver nossa tabelinha criada <3
- 
 
+[ok] Agora vamos criar uma entidade Compliments com os mesmos atributos da Migration 
 
 
 ********************************************
