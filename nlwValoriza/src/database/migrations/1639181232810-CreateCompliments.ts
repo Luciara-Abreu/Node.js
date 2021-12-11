@@ -1,11 +1,11 @@
 import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
-export class CreateCompliments1639156328643 implements MigrationInterface {
+export class CreateCompliments1639181232810 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name: "complements",
+                name: "compliments",
                 columns: [
                     {
                         name: "id",
@@ -37,17 +37,17 @@ export class CreateCompliments1639156328643 implements MigrationInterface {
                 foreignKeys: [
                     {
                         name: "FKUserSenderCompliments",
-                        referencedTableName: "User",
+                        referencedTableName: "users",
                         referencedColumnNames: ["id"],
-                        columnNames: ["User_sender"],
+                        columnNames: ["user_sender"],
                         onDelete: "SET NULL",
                         onUpdate: "SET NULL"
                     },
                     {
                         name: "FKUserRceiverCompliments",
-                        referencedTableName: "User",
+                        referencedTableName: "users",
                         referencedColumnNames: ["id"],
-                        columnNames: ["User_receiver"],
+                        columnNames: ["user_receiver"],
                         onDelete: "SET NULL",
                         onUpdate: "SET NULL"
                     },
@@ -61,11 +61,10 @@ export class CreateCompliments1639156328643 implements MigrationInterface {
                     },
                 ]
             })
-        )
+        )    
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable("complements");
+        await queryRunner.dropTable("compliments");
     }
-
 }

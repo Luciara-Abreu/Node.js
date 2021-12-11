@@ -33,7 +33,9 @@
 
 [ok] orm - database / index
 
-[ok] migrations / criar migrations comando => yarn typeorm migration:create -n CreateUsers / Rodar => yarn typeorm migration:run
+[ok] migrations / 
+criar migrations comando => yarn typeorm migration:create -n CreateUsers  
+Rodar => yarn typeorm migration:run
 
 [ok] entities / User
 
@@ -124,7 +126,7 @@ Foi gerado esse tokem...
 
 Colei no site  https://jwt.io/ sem as aspas e dá para ver no campo=> PAYLOAD:DATA os dados não tão criticos que foi passado pelo usuário na request. 
 
- [ok] Migration compliments para crir os relacionamentos entre as tabelas.
+ [ok] Migration compliments 53:00+- para crir os relacionamentos entre as tabelas.
  Agora temos que rodar nossa migration => yarn typeorm migration:run
  Depois vamos dar um refresh no Beekeeper e ver nossa tabelinha criada <3
 
@@ -136,6 +138,10 @@ Colei no site  https://jwt.io/ sem as aspas e dá para ver no campo=> PAYLOAD:DA
 
 [ok] Agora iremos criar nosso controller => CreateComplimentsController
 
+[ok] Criar nossa rota CreatecomplimentController e depois rodar a aplicação.
+
+
+[ok] rodar a aplicação => yarn dev
 
 ********************************************
 
