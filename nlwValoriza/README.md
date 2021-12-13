@@ -122,7 +122,7 @@ Nessa classe pegamos através do request os dados do usuário e vamos validar ch
 }
 Foi gerado esse tokem...
 
-"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1Y2kuYWJyZXVAZ21haWwuY29tIiwiaWF0IjoxNjM5MTU1NjQ3LCJleHAiOjE2MzkyNDIwNDcsInN1YiI6IjYwNTlkMWZmLTMyM2YtNDFiNS05MDIyLTBhY2NiNjZiMTA5NSJ9.u7DocTVmw4A-E_TKydYy0B2TunumB6SayEf4uiAZJ3M"
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1Y2kuYWJyZXVAZ21haWwuY29tIiwiaWF0IjoxNjM5NDA2NDE1LCJleHAiOjE2Mzk0OTI4MTUsInN1YiI6IjYwNTlkMWZmLTMyM2YtNDFiNS05MDIyLTBhY2NiNjZiMTA5NSJ9.ROa9dPJ1RFi1_rMTPEOH2vPUAV17rwBr0FDlsHv36UE"
 
 Colei no site  https://jwt.io/ sem as aspas e dá para ver no campo=> PAYLOAD:DATA os dados não tão criticos que foi passado pelo usuário na request. 
 
@@ -141,14 +141,17 @@ Colei no site  https://jwt.io/ sem as aspas e dá para ver no campo=> PAYLOAD:DA
 [ok] Criar nossa rota CreatecomplimentController e depois rodar a aplicação.
 
 
-[ok] rodar a aplicação => yarn dev
+[ok] rodar a aplicação => yarn dev 
 
 ********************************************
 
 ### PASSOS QUINTO DIA DE AULA
-[]
+[] Vamos criar um middleware para garantir que o usuário esteja autenticado na aplicação. Para navegar nas nossas rodas e garantir que o usuários já tenha o tokem  valido ... 
 
-[]
+No insomnia dentro de Criate Tag na segunda aba iremos usar o Bearer tokem, passando o tokem gerado em Authenticate User no campo tokem para dentro da nossa aplicação sem as aspas. 
+
+
+[] 
 
 []
 
