@@ -161,7 +161,7 @@ Services   = ListUserSendComplimentsService
 Controller = ListUserSendComplimentsController
 Routes     =
 
-[]
+[] Instalar uma biblioteca chamada (Class-transformer) que permite customizar uma classe e algumas entidades. Ela tem um metodo chamado @expose que permite expor atributos que não foram lidos pelo typeorm. Dentro da entidade Tag vamos importar
 
 []
 

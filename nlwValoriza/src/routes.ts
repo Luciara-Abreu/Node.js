@@ -8,6 +8,8 @@ import { ensureAutenticated} from "./middlewares/ensureAutenticated";
 import { ListUserSendComplimentsService } from "./services/ListUserSendComplimentsService";
 import { ListUserSendComplimentsController } from "./controllers/ListUserSendComplimentsController";
 import { ListUserReceiveComplimentsController } from "./controllers/ListUserReceiveComplimentsController";
+import { ListTagsController } from "./controllers/ListTagsController";
+
 
 const router = Router();
 //Aqui vai todas nossas rotas :))
@@ -18,14 +20,15 @@ const authenticateUserController = new AuthenticateUserController();
 const createComplimentController = new CreateComplimentController();
 const listUserReceiveComplimentsController = new ListUserReceiveComplimentsController();
 const listUserSendComplimentsController = new ListUserSendComplimentsController();
-
+const listTagsController = new ListTagsController();
 
 
 router.post( "/tags" , ensureAutenticated, ensureAdmin ,createTagController.handle);
 router.post( "/users", createUserController.handle);
 router.post( "/login", authenticateUserController.handle);
 router.post( "/compliment", ensureAutenticated, createComplimentController.handle);
-router.get( "/user/Compliments/send", ensureAutenticated ,listUserSendComplimentsController.handle);
-router.get( "/user/Compliments/receive", ensureAutenticated ,listUserReceiveComplimentsController.handle);
+router.get ( "/user/Compliments/send", ensureAutenticated ,listUserSendComplimentsController.handle);
+router.get ( "/user/Compliments/receive", ensureAutenticated ,listUserReceiveComplimentsController.handle);
+router.get ("/listTags", ensureAutenticated, listTagsController.handle);
 
 export { router }
