@@ -28,5 +28,4 @@ router.post( "/compliment", ensureAutenticated, createComplimentController.handl
 router.get( "/user/Compliments/send", ensureAutenticated ,listUserSendComplimentsController.handle);
 router.get( "/user/Compliments/receive", ensureAutenticated ,listUserReceiveComplimentsController.handle);
 
-
 export { router }
