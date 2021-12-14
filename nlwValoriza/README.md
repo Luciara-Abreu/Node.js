@@ -154,23 +154,21 @@ No insomnia dentro de Criate Tag na segunda aba iremos usar o Bearer tokem, pass
 [] Criamos um serviço de para listar as mensagens.
 Services   = ListUserReceiveComplimentsService
 Controller = ListUserReceiveComplimentsController
-Routes     =
 
-[] Criamos um serviço de para listar os usuários.
+
+[] Criamos um serviço de para listar as mensagens de usuários.
 Services   = ListUserSendComplimentsService
 Controller = ListUserSendComplimentsController
-Routes     =
+
 
 [] Instalar uma biblioteca chamada (Class-transformer) que permite customizar uma classe e algumas entidades. Ela tem um metodo chamado @expose que permite expor atributos que não foram lidos pelo typeorm. Dentro da entidade Tag vamos importar
 
-[]
+[] Criar uma lista de todos os usuários
+Services   = ListUserService
+Controller = ListUserController
 
-[]
+[] Escondemos as senhas com a class => Class-transformer com o metodo @Exclude
 
-[]
-
-[]
-
-[]
+[] Curso finalizado era para ser 5 dias mas meu pc lento muito lento terminei em 9 dias :( 
 
 ********************************************
