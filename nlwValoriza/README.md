@@ -151,9 +151,15 @@ Colei no site  https://jwt.io/ sem as aspas e dá para ver no campo=> PAYLOAD:DA
 No insomnia dentro de Criate Tag na segunda aba iremos usar o Bearer tokem, passando o tokem gerado em Authenticate User no campo tokem para dentro da nossa aplicação sem as aspas. 
 
 
-[] 
+[] Criamos um serviço de para listar as mensagens.
+Services   = ListUserReceiveComplimentsService
+Controller = ListUserReceiveComplimentsController
+Routes     =
 
-[]
+[] Criamos um serviço de para listar os usuários.
+Services   = ListUserSendComplimentsService
+Controller = ListUserSendComplimentsController
+Routes     =
 
 []
 
